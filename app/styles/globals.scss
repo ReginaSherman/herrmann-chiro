@@ -1,0 +1,322 @@
+@import "mixins";
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: black;
+  background: $white;
+  overflow-x: hidden;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+.section {
+  position: relative;
+  margin: 40px 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 0 75px;
+  @include devices(tablet) {
+    padding: 0 50px;
+  }
+
+  @include devices(mobile) {
+    padding: 0 20px;
+  }
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+//
+
+button {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  font: inherit;
+  border-radius: 0;
+  appearance: none;
+}
+
+a.button,
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 140px;
+  text-transform: uppercase;
+
+  padding: 10px 30px;
+  margin: 7px;
+  font-size: 15px;
+  line-height: normal;
+
+  border-radius: 20px;
+
+  &.primary {
+    background: $teal-gradient;
+    color: $white;
+    border: 1px solid $teal;
+
+    &:hover {
+      color: $teal;
+      background: $white;
+    }
+  }
+
+  &.secondary {
+    border: 1px solid $teal;
+    color: white;
+
+    &:hover {
+      background: $teal-gradient;
+    }
+  }
+}
+
+//
+
+h1,
+.h1 {
+  font-size: 96px;
+  font-weight: 400;
+  line-height: normal;
+
+  @include devices(tablet) {
+    font-size: 30px;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: normal;
+
+  @include devices(tablet) {
+    font-size: 30px;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+h3,
+.h3 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: normal;
+  @include devices(tablet) {
+    font-size: 24px;
+  }
+}
+.super-header {
+  font-size: 18px;
+  font-weight: 400;
+  color: $green;
+
+  @include devices(tablet) {
+    font-size: 16;
+  }
+}
+
+// Global Components
+.bottom-banner {
+  margin: 40px 0 0 0;
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 75px 0;
+    margin: 0 auto;
+  }
+}
+
+.socials-container {
+  display: flex;
+
+  a {
+    margin: 10px;
+    cursor: pointer;
+
+    &:hover {
+      &:first-of-type {
+        svg {
+          path {
+            fill: $green;
+          }
+        }
+      }
+      svg {
+        path {
+          &:first-of-type {
+            fill: $green;
+          }
+        }
+      }
+    }
+  }
+}
+
+.praise-ribbon {
+  background-color: $gray;
+  width: 100vw;
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .praise-items {
+    display: flex;
+
+    @include devices(mobile) {
+      flex-direction: column;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      text-transform: uppercase;
+      flex: 0 1 auto;
+      padding: 50px;
+      margin: 0 45px;
+
+      @include devices(tablet) {
+        padding: 40px 0;
+      }
+
+      .bold {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+swiper-container {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+}
+
+.hero-text {
+  position: relative;
+  color: $white;
+  padding: 100px 500px 75px 0;
+  z-index: 2;
+
+  h2 {
+    margin: 0;
+  }
+
+  .description {
+    margin-right: 100px;
+  }
+
+  .buttons-container {
+    display: flex;
+  }
+}
+
+.about-us {
+  margin: 80px 0;
+
+  .wrapper {
+    display: flex;
+  }
+
+  .services-container {
+    display: flex;
+    height: 100%;
+
+    .service {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex: 0 1 33%;
+    }
+  }
+}
+
+.new-patient {
+  .wrapper {
+    background: $blue-gradient;
+    color: $white;
+    margin: 0 180px;
+    padding: 0;
+    border-radius: 30px;
+
+    .container-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 240px;
+
+      .buttons-container {
+        display: flex;
+      }
+    }
+  }
+}
+
+.what-to-expect {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 180px;
+  }
+}
+
+.conditions {
+  background: $blue-gradient;
+  color: $white;
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .container-inner {
+    padding: 100px 240px;
+
+    .conditions-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 250px;
+      margin-top: 75px;
+
+      li {
+        padding: 2px 0;
+      }
+    }
+  }
+}

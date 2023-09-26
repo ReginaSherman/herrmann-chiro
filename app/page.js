@@ -1,95 +1,169 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Header from "./components/Header";
+import HeroSlider from "./components/HeroSlider";
+
+import doc from "public/DocJohnny.png";
+import spine from "public/icons/spine.svg";
+import acu from "public/icons/acupuncture.svg";
+import phys from "public/icons/phys.svg";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Header />
+      <main>
+        <div className="homepage-hero">
+          <HeroSlider />
+          <div className="wrapper">
+            <div className="hero-text">
+              <div className="left-side">
+                <h1 className="h1 uppercase">Getting you back to your BEST</h1>
+                <p className="description">
+                  Experience gentle, effective, and personalized chiropractic
+                  care in the heart of Steubenville, Ohio. At Steubenville
+                  Chiropractic Care, we are dedicated to helping you achieve
+                  optimal health and wellness through natural and holistic
+                  methods.
+                </p>
+              </div>
+              <div class="buttons-container">
+                <a class="button primary">Make an Appointment</a>
+                <button class="button secondary">Get Intake Form</button>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <section id="about-us" className="section about-us">
+          <div className="wrapper">
+            <div className="left-side">
+              <div className="text-container">
+                <h2 className="uppercase">About Us</h2>
+                <p>
+                  Our mission at McDonnell Chiropractic is to help families and
+                  individuals of all ages by offering exceptional, affordable
+                  chiropractic care to as many people as possible in a
+                  comfortable, caring, and friendly environment. Our goal is to
+                  inspire and educate our patients to become active participants
+                  in their own well being and in helping others to find
+                  chiropractic care.
+                </p>
+              </div>
+              <div className="services">
+                <h3 className="uppercase">Our Services Include</h3>
+                <div className="services-container">
+                  <div className="service">
+                    <Image src={spine} alt="spine icon" />
+                    <p>Safe, Effective, Hands On Chiropractic Care</p>
+                  </div>
+                  <div className="service">
+                    <Image src={acu} alt="acupuncture icon" />
+                    <p>Acupuncture</p>
+                  </div>
+                  <div className="service">
+                    <Image src={phys} alt="physical therapy icon" />
+                    <p>Rehabilitation Services</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="right-side">
+              <div className="image-container">
+                <Image src={doc} alt="Dr. Johnny" />
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <section id="new-patient" className="section new-patient">
+          <div className="wrapper">
+            <div className="container-inner">
+              <h2 className="uppercase">New Patient</h2>
+              <p>
+                Welcome to our office! We look forward to serving you with a
+                stellar staff and the absolute best in chiropractic care! Please
+                take a moment to access the below link for our new patient
+                intake.
+              </p>
+              <p>
+                If you have any questions, please call our office at
+                740-314-5812.
+              </p>
+              <p>Again, thank you for allowing us to serve you!</p>
+              <div class="buttons-container">
+                <a class="button primary">Call to Schedule</a>
+                <button class="button secondary">Get Intake Form</button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        <section id="expect" className="section what-to-expect">
+          <div className="wrapper">
+            <h2 className="uppercase">What To Expect</h2>
+            <p>
+              On your first visit, you'll meet with the chiropractor to discuss
+              your health concerns and determine if chiropractic care is
+              appropriate for your specific situation. This will be followed by
+              a comprehensive evaluation of your chiropractic, orthopedic and
+              neurological systems. Depending on the diagnosis, advanced
+              diagnostics may be considered. Once the diagnosis is determined,
+              the chiropractor will discuss treatment options with you and start
+              you on the path to better health.
+            </p>
+            <p>
+              While each individual's experience may differ, the majority of
+              patients achieve the level of health they desire through
+              chiropractic care. Your journey to great health involves making
+              healthy choices and engaging in appropriate activities. With
+              guidance and effort from our team, we will help you reach your
+              healthcare goals, whether it's pain relief or overall wellness.
+            </p>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <section className="section conditions">
+          <div className="wrapper">
+            <div className="container-inner">
+              <h2 className="uppercase">
+                Conditions treated by Chiropractic care
+              </h2>
+              <ul className="conditions-list">
+                <li>scoliosis</li>
+                <li>vertigo</li>
+                <li>pinched nerves</li>
+                <li>foot pain</li>
+                <li>weight loss</li>
+                <li>whiplash</li>
+                <li>stress</li>
+                <li>headaches</li>
+                <li>disc injury</li>
+                <li>allergies</li>
+                <li>hip pain</li>
+                <li>pregnancy care</li>
+                <li>leg pain</li>
+                <li>muscle spasms</li>
+                <li>carpal tunnel syndrome</li>
+                <li>immune deficiencies</li>
+                <li>restless leg syndrome</li>
+                <li>automotive accident injuries</li>
+                <li>premenstrual syndrome (PMS)</li>
+                <li>temporomandibular joint syndrome (TMJ)</li>
+                <li>chronic fatigue</li>
+                <li>shoulder pain</li>
+                <li>arm pain</li>
+                <li>sciatica</li>
+                <li>fibromyalgia</li>
+                <li>slipped discs</li>
+                <li>sports injuries</li>
+                <li>dizziness</li>
+                <li>knee pain</li>
+                <li>back pain</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }

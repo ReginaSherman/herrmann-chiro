@@ -168,7 +168,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section location">
+        <section id="location" className="section location">
           <div className="wrapper">
             <h2 className="uppercase">Our Location</h2>
             <div className="location-container">

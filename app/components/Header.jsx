@@ -85,12 +85,12 @@ export default function Header() {
               </a>
             </li>
             <li className="list-item">
-              <a href="/doctors" className="nav-link">
+              <a href="#expect" className="nav-link">
                 what to expect
               </a>
             </li>
             <li className="list-item">
-              <a href="/about-us" className="nav-link">
+              <a href="#location" className="nav-link">
                 location
               </a>
             </li>

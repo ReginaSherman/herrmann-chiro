@@ -111,7 +111,7 @@ h1,
   line-height: normal;
 
   @include devices(tablet) {
-    font-size: 30px;
+    font-size: 50px;
   }
 }
 
@@ -229,12 +229,23 @@ swiper-container {
   object-fit: cover;
   position: absolute;
 }
-
+.homepage-hero {
+  .wrapper {
+    @include devices(tablet) {
+      height: 100vh;
+      overflow: hidden;
+    }
+  }
+}
 .hero-text {
   position: relative;
   color: $white;
   padding: 100px 500px 75px 0;
   z-index: 2;
+
+  @include devices(tablet) {
+    padding: 100px 400px 75px 0;
+  }
 
   h2 {
     margin: 0;
@@ -254,6 +265,7 @@ swiper-container {
 
   .wrapper {
     display: flex;
+    gap: 75px;
   }
 
   .services-container {
@@ -284,6 +296,10 @@ swiper-container {
       align-items: center;
       padding: 120px 240px;
 
+      @include devices(tablet) {
+        padding: 50px;
+      }
+
       .buttons-container {
         display: flex;
       }
@@ -297,6 +313,10 @@ swiper-container {
     flex-direction: column;
     align-items: center;
     margin: 0 180px;
+
+    @include devices(tablet) {
+      margin: 0 60px;
+    }
   }
 }
 
@@ -310,6 +330,10 @@ swiper-container {
 
   .container-inner {
     padding: 100px 240px;
+
+    @include devices(tablet) {
+      padding: 60px;
+    }
 
     .conditions-list {
       display: flex;
@@ -339,6 +363,10 @@ swiper-container {
     margin: 60px 180px;
     border: 3px solid $teal;
     border-radius: 30px;
+
+    @include devices(tablet) {
+      margin: 60px;
+    }
   }
 
   &-grid {
@@ -392,37 +420,43 @@ swiper-container {
   display: flex;
 
   .contact-form {
-    display: flex;
-    flex-direction: column;
     padding: 0 85px;
     flex: 0 1 70%;
     background: $blue-gradient;
     color: $white;
 
-    input {
-      background-color: $black;
-      color: white;
-      opacity: 0.5;
-      height: 50px;
-      border: none;
-      border-radius: 10px;
-      margin: 14px 0;
+    @include devices(tablet) {
+      padding: 0 60px;
+    }
 
-      &.fullName,
-      &.email {
-        width: 50%;
-      }
+    .inner-form {
+      display: flex;
+      flex-direction: column;
+      input {
+        background-color: $black;
+        color: white;
+        opacity: 0.5;
+        height: 50px;
+        border: none;
+        border-radius: 10px;
+        margin: 14px 0;
 
-      &.message {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        height: 150px;
-      }
+        &.fullName,
+        &.email {
+          width: 50%;
+        }
 
-      ::placeholder {
-        opacity: 1;
-        margin-left: 10px;
+        &.message {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          height: 150px;
+        }
+
+        ::placeholder {
+          opacity: 1;
+          margin-left: 10px;
+        }
       }
     }
   }

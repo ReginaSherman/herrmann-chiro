@@ -64,7 +64,7 @@ export default function App() {
           name="message"
           required
         />
-        <button type="submit">Submit</button>
+        <input type="submit" value='submit'/>
       </form>
     </div>
   );

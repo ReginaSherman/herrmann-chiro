@@ -1,11 +1,15 @@
 import Image from "next/image";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 import HeroSlider from "./components/HeroSlider";
-
+import Form from "./components/Form";
 import doc from "public/DocJohnny.png";
 import spine from "public/icons/spine.svg";
 import acu from "public/icons/acupuncture.svg";
 import phys from "public/icons/phys.svg";
+import map from "public/small-map.jpg";
+import practice from "public/practice.jpg";
+import chiro from "public/stock-chiro.jpg";
 
 export default function Home() {
   return (
@@ -102,7 +106,7 @@ export default function Home() {
           <div className="wrapper">
             <h2 className="uppercase">What To Expect</h2>
             <p>
-              On your first visit, you'll meet with the chiropractor to discuss
+              On your first visit, youll meet with the chiropractor to discuss
               your health concerns and determine if chiropractic care is
               appropriate for your specific situation. This will be followed by
               a comprehensive evaluation of your chiropractic, orthopedic and
@@ -112,12 +116,12 @@ export default function Home() {
               you on the path to better health.
             </p>
             <p>
-              While each individual's experience may differ, the majority of
+              While each individuals experience may differ, the majority of
               patients achieve the level of health they desire through
               chiropractic care. Your journey to great health involves making
               healthy choices and engaging in appropriate activities. With
               guidance and effort from our team, we will help you reach your
-              healthcare goals, whether it's pain relief or overall wellness.
+              healthcare goals, whether its pain relief or overall wellness.
             </p>
           </div>
         </section>
@@ -163,7 +167,32 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="section location">
+          <div className="wrapper">
+            <h2 className="uppercase">Our Location</h2>
+            <div className="location-container">
+              <div className="location-grid">
+                <div className="map">
+                  <Image src={map} alt="alt" />
+                </div>
+                <div className="practice">
+                  <Image src={practice} alt="alt" />
+                </div>
+                <div className="address">
+                  <h3>2315 Sunset Blvd Steubenville, Ohio 43952</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="section form">
+          <Image src={chiro} alt="alt" />
+          <Form />
+        </section>
       </main>
+      <Footer />
     </>
   );
 }

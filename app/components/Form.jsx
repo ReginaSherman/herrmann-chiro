@@ -1,12 +1,14 @@
 "use client";
-import { useRef } from "react"; // Import useState
+import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
-export default function App() {
+export default function Form() {
   const form = useRef(null);
 
   const sendEmail = (event) => {
     event.preventDefault();
+    console.log(event);
+
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
@@ -23,9 +25,11 @@ export default function App() {
         .then(
           (result) => {
             alert(result.text);
+            console.log("success");
           },
           (error) => {
             alert(error.text);
+            console.log("failed");
           }
         );
     }
@@ -64,7 +68,7 @@ export default function App() {
           name="message"
           required
         />
-        <input type="submit" value='submit'/>
+        <input type="submit" value="submit" onSubmit={console.log("submit")} />
       </form>
     </div>
   );

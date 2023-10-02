@@ -14,10 +14,14 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   color: black;
   background: $white;
-  overflow-x: hidden;
+  // overflow-x: hidden;
   margin: 0;
   scroll-behavior: smooth;
 }
@@ -228,6 +232,14 @@ swiper-container {
   height: 100vh;
   object-fit: cover;
   position: absolute;
+
+  swiper-slide {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
 }
 .homepage-hero {
   .wrapper {
@@ -247,16 +259,28 @@ swiper-container {
     padding: 100px 400px 75px 0;
   }
 
+  @include devices(mobile) {
+    padding: 20px;
+  }
+
   h2 {
     margin: 0;
   }
 
   .description {
     margin-right: 100px;
+
+    @include devices(mobile) {
+      margin-right: 0px;
+    }
   }
 
   .buttons-container {
     display: flex;
+
+    @include devices(mobile) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -266,11 +290,56 @@ swiper-container {
   .wrapper {
     display: flex;
     gap: 75px;
+
+    @include devices(mobile) {
+      flex-direction: column;
+    }
+
+    .left-side {
+      .image-container {
+        display: none;
+        width: 200px;
+        height: 200px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        &.mbl-only {
+          @include devices(mobile) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .right-side {
+      .image-container {
+        width: 450px;
+        height: 450px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+
+        @include devices(mobile) {
+          display: none;
+        }
+      }
+    }
   }
 
   .services-container {
     display: flex;
     height: 100%;
+
+    @include devices(mobile) {
+      flex-direction: column;
+    }
 
     .service {
       display: flex;
@@ -290,6 +359,10 @@ swiper-container {
     padding: 0;
     border-radius: 30px;
 
+    @include devices(mobile) {
+      margin: 0 20px;
+    }
+
     .container-inner {
       display: flex;
       flex-direction: column;
@@ -300,8 +373,16 @@ swiper-container {
         padding: 50px;
       }
 
+      @include devices(mobile) {
+        padding: 20px;
+      }
+
       .buttons-container {
         display: flex;
+
+        @include devices(mobile) {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -316,6 +397,9 @@ swiper-container {
 
     @include devices(tablet) {
       margin: 0 60px;
+    }
+    @include devices(mobile) {
+      margin: 0 20px;
     }
   }
 }
@@ -366,6 +450,9 @@ swiper-container {
 
     @include devices(tablet) {
       margin: 60px;
+    }
+    @include devices(mobile) {
+      margin: 10px;
     }
   }
 
@@ -419,6 +506,16 @@ swiper-container {
 .form {
   display: flex;
 
+  @include devices(mobile) {
+    flex-direction: column;
+  }
+
+  img {
+    @include devices(mobile) {
+      display: none;
+    }
+  }
+
   .contact-form {
     padding: 0 85px;
     flex: 0 1 70%;
@@ -427,6 +524,10 @@ swiper-container {
 
     @include devices(tablet) {
       padding: 0 60px;
+    }
+
+    @include devices(mobile) {
+      padding: 0 20px;
     }
 
     .inner-form {
@@ -444,6 +545,10 @@ swiper-container {
         &.fullName,
         &.email {
           width: 50%;
+
+          @include devices(mobile) {
+            width: 100%;
+          }
         }
 
         &.message {
@@ -470,6 +575,10 @@ swiper-container {
     align-items: center;
     padding-top: 54px;
     padding-bottom: 54px;
+
+    @include devices(mobile) {
+      flex-direction: column;
+    }
   }
 
   .navbar {

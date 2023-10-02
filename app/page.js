@@ -41,6 +41,9 @@ export default function Home() {
         <section id="about-us" className="section about-us">
           <div className="wrapper">
             <div className="left-side">
+            <div className="image-container mbl-only">
+                <Image src={doc} alt="Dr. Johnny" />
+              </div>
               <div className="text-container">
                 <h2 className="uppercase">About Us</h2>
                 <p>

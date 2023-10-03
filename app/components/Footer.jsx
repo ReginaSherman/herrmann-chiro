@@ -1,12 +1,12 @@
 import Image from "next/image";
-import logo from "public/footer-logo.png";
+import logo from "public/Logo Dark.svg";
 import "../styles/globals.scss";
 
 export default function Footer() {
   return (
     <footer id="footer" className="footer">
       <div className="wrapper">
-        <Image src={logo} alt="alt" />
+        <Image className="footer-logo" src={logo} alt="alt" />
         <nav className="navbar">
           <ul>
             <li className="bold">Navigation</li>

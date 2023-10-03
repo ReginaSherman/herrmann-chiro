@@ -149,6 +149,10 @@ h3,
   @include devices(tablet) {
     font-size: 24px;
   }
+
+  @include devices(mobile) {
+    font-size: 20px;
+  }
 }
 .super-header {
   font-size: 18px;
@@ -237,13 +241,9 @@ h3,
 
 swiper-container {
   width: 100vw;
-  height: auto;
+  height: 100vh;
   object-fit: cover;
-  position: absolute;
-
-  @include devices(tablet) {
-    height: 100vh;
-  }
+  position: relative;
 
   swiper-slide {
     img {
@@ -268,16 +268,14 @@ swiper-container {
   }
 }
 .homepage-hero {
-  .wrapper {
-    @include devices(tablet) {
-      height: 100vh;
-      overflow: hidden;
-    }
-  }
+  position: relative;
 }
 .hero-text {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
   color: $white;
+  top: 0;
   padding: 100px 500px 75px 0;
   z-index: 2;
 
@@ -286,7 +284,10 @@ swiper-container {
   }
 
   @include devices(mobile) {
+    height: 90vh;
+    justify-content: flex-end;
     padding: 20px;
+    padding-left: 0px;
   }
 
   h2 {
@@ -505,6 +506,10 @@ swiper-container {
     padding: 32px;
     border-radius: 30px;
 
+    @include devices(mobile) {
+      padding: 15px;
+    }
+
     .map {
       grid-row: 1 / 3;
       grid-column: 1 / 2;
@@ -540,6 +545,10 @@ swiper-container {
 
       h3 {
         color: $white;
+      }
+      @include devices(mobile) {
+        text-align: center;
+        padding: 10px;
       }
     }
   }
@@ -619,15 +628,31 @@ swiper-container {
     padding-bottom: 54px;
 
     @include devices(mobile) {
+      align-items: flex-start;
       flex-direction: column;
+    }
+
+    .footer-logo {
+      width: 275px;
+      height: 62px;
     }
   }
 
   .navbar {
     display: flex;
     flex-direction: column;
+
+    &:first-of-type {
+      @include devices(mobile) {
+        display: none;
+      }
+    }
     ul {
       list-style: none;
+
+      @include devices(mobile) {
+        padding-left: 0;
+      }
 
       li {
         padding: 5px 0;

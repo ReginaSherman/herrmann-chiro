@@ -23,40 +23,30 @@ export default function Header() {
   useEffect(() => {
     const pathname = window.location.pathname;
     const isHomePage = pathname === "/";
-    const isTreatmentPage = pathname === "/treatment";
-    const isDoctorsPage = pathname === "/doctors";
-    const isAboutUsPage = pathname === "/about-us";
-    const isResourcesPage = pathname === "/resources";
+    const isAboutPage = pathname === "/#about-us";
+    const isNewPatientPage = pathname === "/#new-patient";
+    const isExpectPage = pathname === "/#expect";
+    const isLocationPage = pathname === "/#location";
 
     const navLinks = document.querySelectorAll(".nav-link");
+    console.log(navLinks);
     navLinks.forEach((link) => {
       link.classList.remove("active");
       if (isHomePage && link.getAttribute("href") === "/") {
         link.classList.add("active");
-      } else if (
-        isTreatmentPage &&
-        link.getAttribute("href") === "/treatment"
-      ) {
-        link.classList.add("active");
-      } else if (isDoctorsPage && link.getAttribute("href") === "/doctors") {
-        link.classList.add("active");
-      } else if (isAboutUsPage && link.getAttribute("href") === "/about-us") {
+      } else if (isAboutPage && link.getAttribute("href") === "#about-us") {
         link.classList.add("active");
       } else if (
-        isResourcesPage &&
-        link.getAttribute("href") === "/resources"
+        isNewPatientPage &&
+        link.getAttribute("href") === "#new-patient"
       ) {
+        link.classList.add("active");
+      } else if (isExpectPage && link.getAttribute("href") === "#expect") {
+        link.classList.add("active");
+      } else if (isLocationPage && link.getAttribute("href") === "#location") {
         link.classList.add("active");
       }
     });
-    const logoContainer = document.querySelector(".logo-container");
-    if (logoContainer) {
-      if (isHomePage) {
-        logoContainer.classList.add("hide");
-      } else {
-        logoContainer.classList.remove("hide");
-      }
-    }
   }, []);
 
   return (

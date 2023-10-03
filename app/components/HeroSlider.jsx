@@ -10,6 +10,10 @@ import slide1 from "public/Hero Slider/HeroSlide1.jpg";
 import slide2 from "public/Hero Slider/HeroSlide2.jpg";
 import slide3 from "public/Hero Slider/HeroSlide3.jpg";
 import slide4 from "public/Hero Slider/HeroSlide4.jpg";
+import mobileSlide1 from "public/Hero Slider/Mobile/HeroSlide1.png";
+import mobileSlide2 from "public/Hero Slider/Mobile/HeroSlide2.png";
+import mobileSlide3 from "public/Hero Slider/Mobile/HeroSlide3.png";
+import mobileSlide4 from "public/Hero Slider/Mobile/HeroSlide4.png";
 
 export default function HeroSlider() {
   const swiperElRef = useRef(null);
@@ -53,15 +57,19 @@ export default function HeroSlider() {
       >
         <swiper-slide>
           <Image className="slide-img" src={slide1} alt="alt" />
+          <Image className="slide-img mbl-only" src={mobileSlide1} alt="alt" />
         </swiper-slide>
         <swiper-slide>
           <Image className="slide-img" src={slide2} alt="alt" />
+          <Image className="slide-img mbl-only" src={mobileSlide2} alt="alt" />
         </swiper-slide>
         <swiper-slide>
           <Image className="slide-img" src={slide3} alt="alt" />
+          <Image className="slide-img mbl-only" src={mobileSlide3} alt="alt" />
         </swiper-slide>
         <swiper-slide>
           <Image className="slide-img" src={slide4} alt="alt" />
+          <Image className="slide-img mbl-only" src={mobileSlide4} alt="alt" />
         </swiper-slide>
       </swiper-container>
     </>

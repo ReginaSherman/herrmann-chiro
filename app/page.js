@@ -11,6 +11,13 @@ import map from "public/small-map.jpg";
 import practice from "public/practice.jpg";
 import chiro from "public/stock-chiro.jpg";
 
+import { Oswald } from "next/font/google";
+
+const oswald = Oswald({
+  weight: "700",
+  preload: false,
+});
+
 export default function Home() {
   return (
     <>
@@ -21,7 +28,9 @@ export default function Home() {
           <div className="wrapper">
             <div className="hero-text">
               <div className="left-side">
-                <h1 className="h1 uppercase">Getting you back to your BEST</h1>
+                <h1 className={`h1 uppercase ${oswald.className}`}>
+                  Getting you back to your BEST
+                </h1>
                 <p className="description">
                   Experience gentle, effective, and personalized chiropractic
                   care in the heart of Steubenville, Ohio. At Steubenville
@@ -30,9 +39,15 @@ export default function Home() {
                   methods.
                 </p>
               </div>
-              <div class="buttons-container">
-                <a class="button primary">Make an Appointment</a>
-                <button class="button secondary">Get Intake Form</button>
+              <div className="buttons-container">
+                <a className="button primary">Make an Appointment</a>
+                <a
+                  href="https://intake.mychirotouch.com/?clinic=MC0078"
+                  className="button secondary"
+                  target="_blank"
+                >
+                  Get Intake Form
+                </a>
               </div>
             </div>
           </div>
@@ -41,7 +56,7 @@ export default function Home() {
         <section id="about-us" className="section about-us">
           <div className="wrapper">
             <div className="left-side">
-            <div className="image-container mbl-only">
+              <div className="image-container mbl-only">
                 <Image src={doc} alt="Dr. Johnny" />
               </div>
               <div className="text-container">
@@ -97,9 +112,15 @@ export default function Home() {
                 740-314-5812.
               </p>
               <p>Again, thank you for allowing us to serve you!</p>
-              <div class="buttons-container">
-                <a class="button primary">Call to Schedule</a>
-                <button class="button secondary">Get Intake Form</button>
+              <div className="buttons-container">
+                <a className="button primary">Call to Schedule</a>
+                <a
+                  href="https://intake.mychirotouch.com/?clinic=MC0078"
+                  className="button secondary"
+                  target="_blank"
+                >
+                  Get Intake Form
+                </a>
               </div>
             </div>
           </div>

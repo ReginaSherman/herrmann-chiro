@@ -31,6 +31,10 @@ body {
   margin: 40px 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
@@ -111,8 +115,9 @@ a.button,
 h1,
 .h1 {
   font-size: 96px;
-  font-weight: 400;
-  line-height: normal;
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--font-oswald);
 
   @include devices(tablet) {
     font-size: 50px;
@@ -124,6 +129,7 @@ h2,
   font-size: 36px;
   font-weight: 500;
   line-height: normal;
+  font-family: var(--font-oswald);
 
   @include devices(tablet) {
     font-size: 30px;
@@ -138,6 +144,8 @@ h3,
   font-size: 25px;
   font-weight: 400;
   line-height: normal;
+  font-family: var(--font-oswald);
+
   @include devices(tablet) {
     font-size: 24px;
   }
@@ -243,6 +251,19 @@ swiper-container {
       height: 100%;
       object-fit: cover;
       object-position: right;
+    }
+  }
+}
+
+.slide-img {
+  @include devices(mobile) {
+    display: none;
+  }
+
+  &.mbl-only {
+    display: none;
+    @include devices(mobile) {
+      display: block;
     }
   }
 }

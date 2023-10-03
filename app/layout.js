@@ -1,10 +1,10 @@
 import "./styles/globals.scss";
-import { Montserrat } from "next/font/google";
-import { Roboto } from "next/font/google";
+import { Roboto, Oswald } from "next/font/google";
 
-const montserrat = Montserrat({
-  weight: ["400", "500", "700"],
+const oswald = Oswald({
+  weight: "700",
   preload: false,
+  variable: "--font-oswald",
 });
 
 const roboto = Roboto({
@@ -19,8 +19,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+    <html lang="en" className={oswald.variable}>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

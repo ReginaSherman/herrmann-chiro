@@ -603,7 +603,7 @@ swiper-container {
     }
 
     @include devices(mobile) {
-      padding: 0 20px;
+      padding: 20px;
     }
 
     .inner-form {
@@ -625,7 +625,7 @@ swiper-container {
           width: 50%;
 
           @include devices(mobile) {
-            width: 100%;
+            width: unset;
           }
         }
 

@@ -117,7 +117,7 @@ h1,
   font-size: 96px;
   font-weight: 700;
   line-height: 1;
-  font-family: var(--font-oswald);
+  font-family: $oswald;
 
   @include devices(tablet) {
     font-size: 50px;
@@ -130,6 +130,7 @@ h2,
   font-weight: 500;
   line-height: normal;
   font-family: var(--font-oswald);
+  letter-spacing: 0.1rem;
 
   @include devices(tablet) {
     font-size: 30px;
@@ -145,6 +146,7 @@ h3,
   font-weight: 400;
   line-height: normal;
   font-family: var(--font-oswald);
+  letter-spacing: 0.1rem;
 
   @include devices(tablet) {
     font-size: 24px;
@@ -320,6 +322,7 @@ swiper-container {
 
     @include devices(mobile) {
       flex-direction: column;
+      gap: 0;
     }
 
     .left-side {
@@ -337,7 +340,15 @@ swiper-container {
         &.mbl-only {
           @include devices(mobile) {
             display: block;
+            margin: 0 auto;
           }
+        }
+      }
+
+      .text-container {
+        h2,
+        h3 {
+          color: $blue;
         }
       }
     }
@@ -357,6 +368,12 @@ swiper-container {
           display: none;
         }
       }
+    }
+  }
+
+  .services {
+    h3 {
+      color: $blue;
     }
   }
 
@@ -422,6 +439,10 @@ swiper-container {
     align-items: center;
     margin: 0 180px;
 
+    h2 {
+      color: $blue;
+    }
+
     @include devices(tablet) {
       margin: 0 60px;
     }
@@ -441,6 +462,10 @@ swiper-container {
 
   .container-inner {
     padding: 100px 240px;
+
+    h2 {
+      text-align: center;
+    }
 
     @include devices(tablet) {
       padding: 60px;
@@ -584,11 +609,13 @@ swiper-container {
     .inner-form {
       display: flex;
       flex-direction: column;
-      input {
+      input:not(.submit),
+      textarea {
+        font-family: $roboto;
         background-color: $black;
         color: white;
         opacity: 0.5;
-        height: 50px;
+        padding: 20px;
         border: none;
         border-radius: 10px;
         margin: 14px 0;
@@ -612,6 +639,20 @@ swiper-container {
         ::placeholder {
           opacity: 1;
           margin-left: 10px;
+        }
+      }
+      .submit {
+        background: unset;
+        appearance: none;
+        border: 1px solid $white;
+        padding: 10px;
+        border-radius: 30px;
+        color: $white;
+
+        &:hover {
+          background: $teal;
+          border: 1px solid $teal;
+          color: $white;
         }
       }
     }

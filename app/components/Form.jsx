@@ -61,14 +61,19 @@ export default function Form() {
           name="subject"
           required
         />
-        <input
+        <textarea
           className="message"
           type="text"
           placeholder="Message*"
           name="message"
           required
         />
-        <input type="submit" value="submit" onSubmit={console.log("submit")} />
+        <input
+          className="submit"
+          type="submit"
+          value="Send"
+          onSubmit={console.log("submit")}
+        />
       </form>
     </div>
   );

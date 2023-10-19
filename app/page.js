@@ -128,8 +128,8 @@ export default function Home() {
           <div className="wrapper">
             <h2 className="uppercase">What To Expect</h2>
             <p>
-              On your first visit, you'll meet with the chiropractor to discuss
-              your health concerns and determine if chiropractic care is
+              On your first visit, you&apos;ll meet with the chiropractor to
+              discuss your health concerns and determine if chiropractic care is
               appropriate for your specific situation. This will be followed by
               a comprehensive evaluation of your chiropractic, orthopedic and
               neurological systems. Depending on the diagnosis, advanced
@@ -138,12 +138,13 @@ export default function Home() {
               you on the path to better health.
             </p>
             <p>
-              While each individual's experience may differ, the majority of
-              patients achieve the level of health they desire through
+              While each individual&apos;s experience may differ, the majority
+              of patients achieve the level of health they desire through
               chiropractic care. Your journey to great health involves making
               healthy choices and engaging in appropriate activities. With
               guidance and effort from our team, we will help you reach your
-              healthcare goals, whether it's pain relief or overall wellness.
+              healthcare goals, whether it&apos;s pain relief or overall
+              wellness.
             </p>
           </div>
         </section>

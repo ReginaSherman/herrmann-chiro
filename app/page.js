@@ -32,11 +32,10 @@ export default function Home() {
                   Getting you back to your BEST
                 </h1>
                 <p className="description">
-                  Experience gentle, effective, and personalized chiropractic
-                  care in the heart of Steubenville, Ohio. At Steubenville
-                  Chiropractic Care, we are dedicated to helping you achieve
-                  optimal health and wellness through natural and holistic
-                  methods.
+                  Experience safe, effective and hands on chiropractic care in
+                  the heart of Steubenville, Ohio. At Herrmann Chiropractic, we
+                  are dedicated to helping you achieve optimal health and
+                  wellness through natural and holistic methods.
                 </p>
               </div>
               <div className="buttons-container">
@@ -62,13 +61,12 @@ export default function Home() {
               <div className="text-container">
                 <h2 className="uppercase">About Us</h2>
                 <p>
-                  Our mission at McDonnell Chiropractic is to help families and
-                  individuals of all ages by offering exceptional, affordable
-                  chiropractic care to as many people as possible in a
-                  comfortable, caring, and friendly environment. Our goal is to
-                  inspire and educate our patients to become active participants
-                  in their own well being and in helping others to find
-                  chiropractic care.
+                  Our mission at Herrmann Chiropractic is to help individuals
+                  and families of all ages by offering exceptional chiropractic
+                  care to as many people as possible in a comfortable, caring,
+                  and friendly environment. Our goal is to inspire and educate
+                  our patients to become active participants in their own well
+                  being.
                 </p>
               </div>
               <div className="services">
@@ -76,7 +74,7 @@ export default function Home() {
                 <div className="services-container">
                   <div className="service">
                     <Image src={spine} alt="spine icon" />
-                    <p>Safe, Effective, Hands On Chiropractic Care</p>
+                    <p>Chiropractic Care</p>
                   </div>
                   <div className="service">
                     <Image src={acu} alt="acupuncture icon" />
@@ -130,7 +128,7 @@ export default function Home() {
           <div className="wrapper">
             <h2 className="uppercase">What To Expect</h2>
             <p>
-              On your first visit, youll meet with the chiropractor to discuss
+              On your first visit, you'll meet with the chiropractor to discuss
               your health concerns and determine if chiropractic care is
               appropriate for your specific situation. This will be followed by
               a comprehensive evaluation of your chiropractic, orthopedic and
@@ -140,12 +138,12 @@ export default function Home() {
               you on the path to better health.
             </p>
             <p>
-              While each individuals experience may differ, the majority of
+              While each individual's experience may differ, the majority of
               patients achieve the level of health they desire through
               chiropractic care. Your journey to great health involves making
               healthy choices and engaging in appropriate activities. With
               guidance and effort from our team, we will help you reach your
-              healthcare goals, whether its pain relief or overall wellness.
+              healthcare goals, whether it's pain relief or overall wellness.
             </p>
           </div>
         </section>

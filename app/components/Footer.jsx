@@ -49,7 +49,7 @@ export default function Footer() {
             <li>2315 Sunset Blvd</li>
             <li>Steubenville, Ohio 43952</li>
             <li className="bold">Phone Number</li>
-            <li>??</li>
+            <li>740-314-5812</li>
           </ul>
         </nav>
       </div>

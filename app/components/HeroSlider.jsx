@@ -6,10 +6,10 @@ import Image from "next/image";
 register();
 import "../styles/globals.scss";
 
-import slide1 from "public/Hero Slider/HeroSlide1.jpg";
-import slide2 from "public/Hero Slider/HeroSlide2.jpg";
-import slide3 from "public/Hero Slider/HeroSlide3.jpg";
-import slide4 from "public/Hero Slider/HeroSlide4.jpg";
+import slide1 from "public/Hero Slider/HeroSlide1.png";
+import slide2 from "public/Hero Slider/HeroSlide2.png";
+import slide3 from "public/Hero Slider/HeroSlide3.png";
+import slide4 from "public/Hero Slider/HeroSlide4.png";
 import mobileSlide1 from "public/Hero Slider/Mobile/HeroSlide1.png";
 import mobileSlide2 from "public/Hero Slider/Mobile/HeroSlide2.png";
 import mobileSlide3 from "public/Hero Slider/Mobile/HeroSlide3.png";

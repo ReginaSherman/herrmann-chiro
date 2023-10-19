@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
+      <main id="/">
         <div className="homepage-hero">
           <HeroSlider />
           <div className="wrapper">

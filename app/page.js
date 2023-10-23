@@ -1,5 +1,8 @@
 import Image from "next/image";
-import Header from "./components/Header";
+import dynamic from "next/dynamic";
+const Header = dynamic(() => import("./components/Header"), {
+  ssr: false,
+});
 import Footer from "./components/Footer";
 import HeroSlider from "./components/HeroSlider";
 import Form from "./components/Form";
@@ -59,7 +62,7 @@ export default function Home() {
                 <Image src={doc} alt="Dr. Johnny" />
               </div>
               <div className="text-container">
-                <h2 className="uppercase">About Us</h2>
+                <h2>About Us</h2>
                 <p>
                   Our mission at Herrmann Chiropractic is to help individuals
                   and families of all ages by offering exceptional chiropractic
@@ -70,7 +73,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="services">
-                <h3 className="uppercase">Our Services Include</h3>
+                <h3>Our Services Include</h3>
                 <div className="services-container">
                   <div className="service">
                     <Image src={spine} alt="spine icon" />
@@ -98,7 +101,7 @@ export default function Home() {
         <section id="new-patient" className="section new-patient">
           <div className="wrapper">
             <div className="container-inner">
-              <h2 className="uppercase">New Patient</h2>
+              <h2>New Patient</h2>
               <p>
                 Welcome to our office! We look forward to serving you with a
                 stellar staff and the absolute best in chiropractic care! Please
@@ -126,7 +129,7 @@ export default function Home() {
 
         <section id="expect" className="section what-to-expect">
           <div className="wrapper">
-            <h2 className="uppercase">What To Expect</h2>
+            <h2>What To Expect</h2>
             <p>
               On your first visit, you&apos;ll meet with the chiropractor to
               discuss your health concerns and determine if chiropractic care is
@@ -149,7 +152,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section conditions">
+        {/* <section className="section conditions">
           <div className="wrapper">
             <div className="container-inner">
               <h2 className="uppercase">
@@ -189,11 +192,11 @@ export default function Home() {
               </ul>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section id="location" className="section location">
           <div className="wrapper">
-            <h2 className="uppercase">Our Location</h2>
+            <h2>Our Location</h2>
             <div className="location-container">
               <div className="location-grid">
                 <div className="map">

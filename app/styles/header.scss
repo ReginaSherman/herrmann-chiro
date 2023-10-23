@@ -95,10 +95,9 @@
         left: 0;
         background: $blue-gradient;
         width: 100%;
-        height: 100vw;
-        top: 100px;
+        height: 100vh;
+        top: 80px;
         padding: 10px;
-        border: 1px solid #ccc;
         z-index: 1;
 
         &.open {

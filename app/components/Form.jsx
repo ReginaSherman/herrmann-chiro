@@ -68,12 +68,7 @@ export default function Form() {
           name="message"
           required
         />
-        <input
-          className="submit"
-          type="submit"
-          value="Send"
-          onSubmit={console.log("submit")}
-        />
+        <input className="submit" type="submit" value="Send" />
       </form>
     </div>
   );

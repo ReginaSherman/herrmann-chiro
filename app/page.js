@@ -114,7 +114,7 @@ export default function Home() {
               </p>
               <p>Again, thank you for allowing us to serve you!</p>
               <div className="buttons-container">
-                <a href='tel:+7403145812' className="button primary">Call to Schedule</a>
+                <a href='tel:+17403145812' className="button primary">Call to Schedule</a>
                 <a
                   href="https://intake.mychirotouch.com/?clinic=MC0078"
                   className="button secondary"

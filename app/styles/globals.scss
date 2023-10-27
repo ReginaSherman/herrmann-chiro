@@ -597,6 +597,12 @@ swiper-container {
     background: $blue-gradient;
     color: $white;
 
+    &:has(.submission-message) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     @include devices(tablet) {
       padding: 0 60px;
     }

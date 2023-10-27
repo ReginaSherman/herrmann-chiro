@@ -3,7 +3,7 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Form() {
-  const form = useRef(null);
+  const form = useRef();
 
   const sendEmail = (event) => {
     event.preventDefault();
@@ -22,10 +22,10 @@ export default function Form() {
         )
         .then(
           (result) => {
-            alert(result.text);
+            console.log(result.text);
           },
           (error) => {
-            alert(error.text);
+            console.log(error.text);
           }
         );
     }

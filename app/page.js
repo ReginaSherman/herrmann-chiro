@@ -31,8 +31,8 @@ export default function Home() {
           <div className="wrapper">
             <div className="hero-text">
               <div className="left-side">
-                <h1 className={`h1 uppercase ${oswald.className}`}>
-                  Getting you back to your BEST
+                <h1 className={`h1 ${oswald.className}`}>
+                  Getting You Back To Your Best
                 </h1>
                 <p className="description">
                   Experience safe, effective and hands on chiropractic care in

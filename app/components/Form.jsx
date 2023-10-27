@@ -25,11 +25,9 @@ export default function Form() {
         .then(
           (result) => {
             alert(result.text);
-            console.log("success");
           },
           (error) => {
             alert(error.text);
-            console.log("failed");
           }
         );
     }
@@ -38,7 +36,7 @@ export default function Form() {
   return (
     <div className="contact-form">
       <h2>Send us a message for more info!</h2>
-      <p>Horem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+      <p>Get in touch for a healthier you.</p>
       <form ref={form} className="inner-form" onSubmit={sendEmail}>
         <input
           className="fullName"

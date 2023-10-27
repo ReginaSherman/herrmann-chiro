@@ -15,41 +15,14 @@ const montserrat = Montserrat({
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
 
-
   const toggleMenu = () => {
-    console.log('clicked')
+    console.log("clicked");
     setMenuOpen(!isMenuOpen);
   };
 
-  // // Determine the active page based on the current URL within a useEffect
-  // useEffect(() => {
-  //   const pathname = window.location.pathname;
-  //   const isHomePage = pathname === "/";
-  //   const isAboutPage = pathname === "/#about-us";
-  //   const isNewPatientPage = pathname === "/#new-patient";
-  //   const isExpectPage = pathname === "/#expect";
-  //   const isLocationPage = pathname === "/#location";
-
-  //   const navLinks = document.querySelectorAll(".nav-link");
-  //   console.log(navLinks);
-  //   navLinks.forEach((link) => {
-  //     link.classList.remove("active");
-  //     if (isHomePage && link.getAttribute("href") === "/") {
-  //       link.classList.add("active");
-  //     } else if (isAboutPage && link.getAttribute("href") === "#about-us") {
-  //       link.classList.add("active");
-  //     } else if (
-  //       isNewPatientPage &&
-  //       link.getAttribute("href") === "#new-patient"
-  //     ) {
-  //       link.classList.add("active");
-  //     } else if (isExpectPage && link.getAttribute("href") === "#expect") {
-  //       link.classList.add("active");
-  //     } else if (isLocationPage && link.getAttribute("href") === "#location") {
-  //       link.classList.add("active");
-  //     }
-  //   });
-  // }, []);
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   return (
     <header id="header" className={`header ${isMenuOpen ? "open" : ""}`}>
@@ -65,28 +38,24 @@ export default function Header() {
             <div className="bar"></div>
             <div className="bar"></div>
           </div>
-          <ul
-            className={`flex-row ${montserrat.className} ${
-              isMenuOpen ? "open" : ""
-            }`}
-          >
+          <ul className={`flex-row ${isMenuOpen ? "open" : ""}`}>
             <li className="list-item">
-              <a href="#about-us" className="nav-link">
+              <a href="#about-us" className="nav-link" onClick={closeMenu}>
                 about us
               </a>
             </li>
             <li className="list-item">
-              <a href="#new-patient" className="nav-link">
+              <a href="#new-patient" className="nav-link" onClick={closeMenu}>
                 new patient
               </a>
             </li>
             <li className="list-item">
-              <a href="#expect" className="nav-link">
+              <a href="#expect" className="nav-link" onClick={closeMenu}>
                 what to expect
               </a>
             </li>
             <li className="list-item">
-              <a href="#location" className="nav-link">
+              <a href="#location" className="nav-link" onClick={closeMenu}>
                 location
               </a>
             </li>

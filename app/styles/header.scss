@@ -58,6 +58,10 @@
           border-bottom: 0px solid $accent-color;
           transition: border-bottom 0.2s ease-in-out;
 
+          @media screen and (max-width: 1024px) {
+            padding-bottom: 0px;
+             }
+
           &.active,
           &:hover {
             border-bottom: 4px solid $accent-color;

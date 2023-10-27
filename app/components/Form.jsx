@@ -7,8 +7,6 @@ export default function Form() {
 
   const sendEmail = (event) => {
     event.preventDefault();
-    console.log(event);
-
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
@@ -25,11 +23,9 @@ export default function Form() {
         .then(
           (result) => {
             alert(result.text);
-            console.log("success");
           },
           (error) => {
             alert(error.text);
-            console.log("failed");
           }
         );
     }

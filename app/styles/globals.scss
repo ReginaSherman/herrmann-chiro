@@ -625,15 +625,6 @@ swiper-container {
         border-radius: 10px;
         margin: 14px 0;
 
-        &.fullName,
-        &.email {
-          width: 50%;
-
-          @include devices(mobile) {
-            width: unset;
-          }
-        }
-
         &.message {
           display: flex;
           flex-direction: column;

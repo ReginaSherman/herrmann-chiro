@@ -1,5 +1,6 @@
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Layout from "./layout";
 const Header = dynamic(() => import("./components/Header"), {
   ssr: false,
 });
@@ -114,7 +115,9 @@ export default function Home() {
               </p>
               <p>Again, thank you for allowing us to serve you!</p>
               <div className="buttons-container">
-                <a href='tel:+17403145812' className="button primary">Call to Schedule</a>
+                <a href="tel:+17403145812" className="button primary">
+                  Call to Schedule
+                </a>
                 <a
                   href="https://intake.mychirotouch.com/?clinic=MC0078"
                   className="button secondary"

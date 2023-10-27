@@ -3,10 +3,11 @@ import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 export default function Form() {
-  const form = useRef();
+  const form = useRef(null);
 
   const sendEmail = (event) => {
     event.preventDefault();
+
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
       process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID &&
@@ -22,10 +23,12 @@ export default function Form() {
         )
         .then(
           (result) => {
-            console.log(result.text);
+            alert(result.text);
+            console.log("success");
           },
           (error) => {
-            console.log(error.text);
+            alert(error.text);
+            console.log("failed");
           }
         );
     }

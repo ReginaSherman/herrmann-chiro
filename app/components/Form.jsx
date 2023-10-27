@@ -25,9 +25,11 @@ export default function Form() {
         .then(
           (result) => {
             alert(result.text);
+            console.log("success");
           },
           (error) => {
             alert(error.text);
+            console.log("failed");
           }
         );
     }

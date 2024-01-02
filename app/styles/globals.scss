@@ -296,9 +296,11 @@ swiper-container {
   }
 
   .description {
+    font-size: 20px;
     margin-right: 100px;
 
     @include devices(mobile) {
+      font-size: unset;
       margin-right: 0px;
     }
   }

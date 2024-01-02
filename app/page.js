@@ -72,6 +72,32 @@ export default function Home() {
                   our patients to become active participants in their own well
                   being.
                 </p>
+                <p>
+                  Dr. Herrmann is originally from Steubenville, Ohio. He
+                  attended Catholic Central High and graduated in 2009. While
+                  recovering from sports injuries in high school he began to see
+                  the benefits of chiropractic care and entertained the idea of
+                  becoming a doctor of chiropractic one day. Dr. Herrmann
+                  attended Franciscan University and graduated in the fall of
+                  2014 with his Bachelor of Science in Biology. During his time
+                  at Franciscan, he visited with various chiropractors in the
+                  local area and became acquainted with Dr. Greg McDonnell at
+                  McDonnell Chiropractic.
+                </p>
+                <p>
+                  Dr. Herrmann continued his education by attending New York
+                  Chiropractic College (now Northeast College) where he
+                  graduated with a Doctor of Chiropractic degree in 2017. After
+                  graduating, he moved back to his hometown and began working at
+                  McDonnell Chiropractic. Dr. Herrmann has since bought and
+                  renamed the practice Herrmann Chiropractic. There he continues
+                  to offer exceptional chiropractic care to the greater
+                  Steubenville area.
+                </p>
+                <p>
+                  Dr. Herrmann and his wife, Shannon, have 2 boys and a little
+                  girl and reside in Steubenville, Ohio.
+                </p>
               </div>
               <div className="services">
                 <h3>Our Services Include</h3>
@@ -144,13 +170,30 @@ export default function Home() {
               you on the path to better health.
             </p>
             <p>
+              The most common treatment recommended and performed is the
+              chiropractic adjustment. The adjustment involves the correction of
+              joint movement for the purposes of removing dysfunction and
+              relieving pain. These treatments are commonly used to relieve
+              pain; however, they can have a range of positive effects
+              throughout the body. After the exam and consultation some patients
+              are recommended acupuncture treatment. Acupuncture involves
+              inserting a tiny needle into the skin to balance and correct the
+              patient&apos;s nervous system. Acupuncture care is commonly used
+              for pain as well as various organ issues. Patients often have
+              questions about chiropractic care and acupuncture. The doctor is
+              happy to answer all questions and give a thorough explanation
+              before treating the patient. We believe it is imperative that the
+              patient is informed so they are able to make better decisions for
+              their health
+            </p>
+            <p>
               While each individual&apos;s experience may differ, the majority
-              of patients achieve the level of health they desire through
-              chiropractic care. Your journey to great health involves making
-              healthy choices and engaging in appropriate activities. With
-              guidance and effort from our team, we will help you reach your
-              healthcare goals, whether it&apos;s pain relief or overall
-              wellness.
+              of patients achieve significant improvements to their health and
+              wellbeing through chiropractic care. Your journey to great health
+              involves making healthy choices and engaging in appropriate
+              activities. With guidance and effort from our team, we will help
+              you reach your healthcare goals, whether it&apos;s pain relief or
+              overall wellness.
             </p>
           </div>
         </section>

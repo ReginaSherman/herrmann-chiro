@@ -5,6 +5,15 @@
   flex-direction: column;
   background: $black-gradient;
   color: $white;
+  .navbar {
+    ul {
+      li {
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
 
   .footer-container {
     padding: 70px;

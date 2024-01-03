@@ -11,16 +11,16 @@ export default function Footer() {
           <ul>
             <li className="bold">Navigation</li>
             <li>
-              <a>About Us</a>
+              <a href="#about-us">About Us</a>
             </li>
             <li>
-              <a>New Patient</a>
+              <a href="#expect">What to Expect</a>
             </li>
             <li>
-              <a>What to Expect</a>
+              <a href="#new-patient">New Patient</a>
             </li>
             <li>
-              <a>Location</a>
+              <a href="#location">Location</a>
             </li>
           </ul>
         </nav>

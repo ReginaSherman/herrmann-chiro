@@ -45,15 +45,16 @@ export default function Header() {
               </a>
             </li>
             <li className="list-item">
-              <a href="#new-patient" className="nav-link" onClick={closeMenu}>
-                new patient
-              </a>
-            </li>
-            <li className="list-item">
               <a href="#expect" className="nav-link" onClick={closeMenu}>
                 what to expect
               </a>
             </li>
+            <li className="list-item">
+              <a href="#new-patient" className="nav-link" onClick={closeMenu}>
+                new patient
+              </a>
+            </li>
+
             <li className="list-item">
               <a href="#location" className="nav-link" onClick={closeMenu}>
                 location

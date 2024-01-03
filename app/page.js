@@ -43,7 +43,9 @@ export default function Home() {
                 </p>
               </div>
               <div className="buttons-container">
-                <a className="button primary">Make an Appointment</a>
+                <a href="tel:+17403145812" className="button primary">
+                  Call to Schedule
+                </a>
                 <a
                   href="https://intake.mychirotouch.com/?clinic=MC0078"
                   className="button secondary"

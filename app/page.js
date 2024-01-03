@@ -90,7 +90,7 @@ export default function Home() {
                   graduated with a Doctor of Chiropractic degree in 2017. After
                   graduating, he moved back to his hometown and began working at
                   McDonnell Chiropractic. Dr. Herrmann has since bought and
-                  renamed the practice Herrmann Chiropractic. There he continues
+                  renamed the practice Herrmann Chiropractic. Here he continues
                   to offer exceptional chiropractic care to the greater
                   Steubenville area.
                 </p>
@@ -120,37 +120,6 @@ export default function Home() {
             <div className="right-side">
               <div className="image-container">
                 <Image src={doc} alt="Dr. Johnny" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="new-patient" className="section new-patient">
-          <div className="wrapper">
-            <div className="container-inner">
-              <h2>New Patient</h2>
-              <p>
-                Welcome to our office! We look forward to serving you with a
-                stellar staff and the absolute best in chiropractic care! Please
-                take a moment to access the below link for our new patient
-                intake.
-              </p>
-              <p>
-                If you have any questions, please call our office at
-                740-314-5812.
-              </p>
-              <p>Again, thank you for allowing us to serve you!</p>
-              <div className="buttons-container">
-                <a href="tel:+17403145812" className="button primary">
-                  Call to Schedule
-                </a>
-                <a
-                  href="https://intake.mychirotouch.com/?clinic=MC0078"
-                  className="button secondary"
-                  target="_blank"
-                >
-                  Get Intake Form
-                </a>
               </div>
             </div>
           </div>
@@ -195,6 +164,37 @@ export default function Home() {
               you reach your healthcare goals, whether it&apos;s pain relief or
               overall wellness.
             </p>
+          </div>
+        </section>
+
+        <section id="new-patient" className="section new-patient">
+          <div className="wrapper">
+            <div className="container-inner">
+              <h2>New Patient</h2>
+              <p>
+                Welcome to our office! We look forward to serving you with a
+                stellar staff and the absolute best in chiropractic care! Please
+                take a moment to access the below link for our new patient
+                intake.
+              </p>
+              <p>
+                If you have any questions, please call our office at
+                740-314-5812.
+              </p>
+              <p>Again, thank you for allowing us to serve you!</p>
+              <div className="buttons-container">
+                <a href="tel:+17403145812" className="button primary">
+                  Call to Schedule
+                </a>
+                <a
+                  href="https://intake.mychirotouch.com/?clinic=MC0078"
+                  className="button secondary"
+                  target="_blank"
+                >
+                  Get Intake Form
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 

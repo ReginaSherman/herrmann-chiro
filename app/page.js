@@ -7,7 +7,8 @@ const Header = dynamic(() => import("./components/Header"), {
 import Footer from "./components/Footer";
 import HeroSlider from "./components/HeroSlider";
 import Form from "./components/Form";
-import doc from "public/DocJohnny.png";
+import doc from "public/JohnnyHerrmann-8.jpg";
+import fam from "public/HerrmannFamily-54.jpg"
 import spine from "public/icons/spine.svg";
 import acu from "public/icons/acupuncture.svg";
 import phys from "public/icons/phys.svg";
@@ -100,6 +101,9 @@ export default function Home() {
                   Dr. Herrmann and his wife, Shannon, have 2 boys and a little
                   girl and reside in Steubenville, Ohio.
                 </p>
+                <div className="image-container fam">
+                <Image src={fam} alt="Herrmann Family" />
+              </div>
               </div>
               <div className="services">
                 <h3>Our Services Include</h3>

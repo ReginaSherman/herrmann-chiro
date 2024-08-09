@@ -331,11 +331,27 @@ swiper-container {
         display: none;
         width: 200px;
         height: 200px;
+        border-radius: 0 225px 225px 225px;
+        overflow: hidden;
 
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: cover;
+        }
+
+        &.fam {
+          display: block;
+          border-radius: 20px;
+          overflow: hidden;
+          width: 70%;
+          height: auto;
+          aspect-ratio: 2 / 1;
+          margin: 50px auto;
+
+          img {
+            object-fit: cover;
+          }
         }
 
         &.mbl-only {
@@ -356,13 +372,15 @@ swiper-container {
 
     .right-side {
       .image-container {
-        width: 450px;
-        height: 450px;
+        width: 400px;
+        height: 400px;
+        border-radius: 0 225px 225px 225px;
+        overflow: hidden;
 
         img {
           width: 100%;
           height: 100%;
-          object-fit: contain;
+          object-fit: cover;
         }
 
         @include devices(mobile) {

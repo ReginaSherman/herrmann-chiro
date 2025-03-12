@@ -48,7 +48,7 @@ export default function Home() {
                   Call to Schedule
                 </a>
                 <a
-                  href="https://intake.mychirotouch.com/?clinic=MC0078"
+                  href="https://intake.mychirotouch.com/?clientid=HC0238"
                   className="button secondary"
                   target="_blank"
                 >
@@ -193,7 +193,7 @@ export default function Home() {
                   Call to Schedule
                 </a>
                 <a
-                  href="https://intake.mychirotouch.com/?clinic=MC0078"
+                  href="https://intake.mychirotouch.com/?clientid=HC0238"
                   className="button secondary"
                   target="_blank"
                 >

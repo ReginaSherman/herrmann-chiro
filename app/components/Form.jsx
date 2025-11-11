@@ -1,9 +1,11 @@
 'use client'
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Form() {
   const form = useRef(null);
+  const recaptchaRef = useRef(null);
   const [isSubmitted, setSubmitted] = useState(false);
 
   const isEmailValid = (email) => {
@@ -12,8 +14,15 @@ export default function Form() {
     return emailPattern.test(email);
   };
 
-  const sendEmail = (event) => {
+  const sendEmail = async (event) => {
     event.preventDefault();
+
+    const recaptchaValue = recaptchaRef.current.getValue();
+    
+    if (!recaptchaValue) {
+      alert("Please complete the reCAPTCHA verification.");
+      return;
+    }
 
     if (
       process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID &&
@@ -38,13 +47,14 @@ export default function Form() {
         )
         .then(
           (result) => {
-            // Reset the form and set the submitted state to true
             form.current.reset();
+            recaptchaRef.current.reset();
             setSubmitted(true);
           },
           (error) => {
             alert(error.text);
             console.log("failed");
+            recaptchaRef.current.reset();
           }
         );
     }
@@ -88,6 +98,10 @@ export default function Form() {
               placeholder="Message*"
               name="message"
               required
+            />
+            <ReCAPTCHA
+              ref={recaptchaRef}
+              sitekey="6Le1uwQsAAAAAA4bmsIHY4orMtAmKstRsCv9tUnm"
             />
             <input className="submit" type="submit" value="Send" />
           </form>

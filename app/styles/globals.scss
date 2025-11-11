@@ -601,6 +601,7 @@ swiper-container {
 
 .form {
   display: flex;
+  margin-bottom: 0;
 
   @include devices(mobile) {
     flex-direction: column;
@@ -665,6 +666,7 @@ swiper-container {
         padding: 10px;
         border-radius: 30px;
         color: $white;
+        margin: 14px 0;
 
         &:hover {
           background: $teal;
